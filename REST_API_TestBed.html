@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    </head>
+    <style>
+ input {width:300px;}
+ h1    {color: blue;}
+</style>
+
+<script type="text/javascript">
+    function getProcessList()
+    {
+    $.ajax(
+    {
+      type: "GET",
+      url: "https://pcs-gse00011861.process.us2.oraclecloud.com/bpm/api/4.0/process-definitions",
+      headers: {'Authorization': "Basic YmFsYS5ndXB0YTpjaElycHlAMUtub3Q="},
+      contentType: "application/json",
+      dataType: "json",
+      success: function(json){$("#response").html(JSON.stringify(json));},
+      failure: function(errMsg) {
+        alert(errMsg);
+      },
+      error: function(xhr){
+        alert("An error occured: " + xhr.status + " " + xhr.statusTextt);
+      }
+    });
+    }
+    
+    function getProcessInstance()
+    {
+      $.ajax(
+      {
+        type: "GET",
+        url: "https://pcs-gse00011861.process.us2.oraclecloud.com/bpm/api/4.0/processes/277",
+        headers: {'Authorization': "Basic YmFsYS5ndXB0YTpjaElycHlAMUtub3Q="},
+        contentType: "application/json",
+        dataType: "json",
+        success: function(json){$("#resptwo").html(JSON.stringify(json));},
+        failure: function(errMsg) {
+          alert(errMsg);
+        },
+        error: function(xhr){
+          alert("An error occured: " + xhr.status + " " + xhr.statusText);
+        }
+      });
+    }
+ 
+    function getTaskList()
+    {
+      $.ajax(
+      {
+        type: "GET",
+        url: "https://pcs-gse00011861.process.us2.oraclecloud.com/bpm/api/4.0/tasks?status=ASSIGNED&assignment=MY_AND_GROUP",
+        headers: {'Authorization': "Basic YmFsYS5ndXB0YTpjaElycHlAMUtub3Q="},
+        contentType: "application/json",
+        dataType: "json",
+        success: function(json){$("#respthree").html(JSON.stringify(json));},
+        failure: function(errMsg) {
+          alert(errMsg);
+        },
+        error: function(xhr){
+          alert("An error occured: " + xhr.status + " " + xhr.statusText);
+        }
+      });
+    }
+ 
+    function getTaskPayload()
+    {
+      $.ajax(
+      {
+        type: "GET",
+        url: "https://pcs-gse00011861.process.us2.oraclecloud.com/bpm/api/4.0/tasks/200255/payload",
+        headers: {'Authorization': "Basic YmFsYS5ndXB0YTpjaElycHlAMUtub3Q="},
+        contentType: "application/xml",
+        dataType: "xml",
+        success: function(xml){$("#respfour").html($(xml).text());},
+        failure: function(errMsg) {
+          alert(errMsg);
+        },
+        error: function(xhr){
+          alert("An error occured: " + xhr.status + " " + xhr.statusText);
+        }
+      });
+    }
+ 
+    function getAuditDiagram()
+    {
+      var image = document.images[0];
+      var oReq = new XMLHttpRequest();
+      oReq.open("GET", "https://pcs-gse00011861.process.us2.oraclecloud.com/bpm/api/4.0/processes/272/audit", true);
+      oReq.responseType = "blob";
+      oReq.setRequestHeader("Authorization", "Basic YmFsYS5ndXB0YTpjaElycHlAMUtub3Q=");
+      oReq.onreadystatechange = function () {
+                                  if (oReq.readyState == oReq.DONE) {
+                                    image.src = window.URL.createObjectURL(oReq.response);
+                                  }
+                                }
+      oReq.send();
+    }
+</script>
+  <body>
+    <h1>My PCS REST API Test Bed</h1>
+   <p>Part 1, use process-definitions call to get the list of process - ** Make sure you have the right PCS URL **</p>
+    <input type="button" value="Get Process List" onClick="getProcessList()">
+    <br><br>
+    <div id="response"></div>
+    <br><br>
+   <p>Part 2, Retrieve a Process Instance - ** Make sure you have the right PCS URL & Process Id **</p>
+    <input type="button" value="Get Process Instance" onClick="getProcessInstance()">
+    <br><br>
+    <div id="resptwo"></div>
+    <br><br>
+   <p>Part 3, Retrieve Task List - ** Make sure you have the right PCS URL & Task Number **</p>
+    <input type="button" value="Get Task List" onClick="getTaskList()">
+    <br><br>
+    <div id="respthree"></div>
+    <br><br>
+   <p>Part 4, Retrieve Task Payload - ** Make sure you have the right PCS URL & Task Number **</p>
+    <input type="button" value="Get Task Payload" onClick="getTaskPayload()">
+    <br><br>
+    <div id="respfour"></div>
+    <br><br>
+   <p>Part 5, Retrieve the Audit Diagram - ** Make sure you have the right PCS URL & Process Id **</p>
+    <input type="button" value="Get Audit Diagram" onClick="getAuditDiagram()">
+    <br><br>
+    <img src="">
+    <br><br>
+  </body>
+</html>

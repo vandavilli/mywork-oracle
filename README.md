@@ -1,2 +1,2 @@
-# mywork-oracle
-Collection of assets / projects / code developed at oracle.
+# github-orclcloud
+Repository to hold all my oracle cloud assets

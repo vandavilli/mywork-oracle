@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org" targetNamespace="http://www.example.org" elementFormDefault="qualified">
+
+<xs:complexType name="signerBObj">
+	<xs:sequence>
+		<xs:element name="emailAddress" type="xs:string"/>
+		<xs:element name="lastName" type="xs:string"/>
+		<xs:element name="firstName" type="xs:string"/>
+		<xs:element name="powerOfAttorney" type="xs:string"/>
+		<xs:element name="signed" type="xs:boolean"/>
+		<xs:element name="fullSignAuthority" type="xs:boolean"/>
+		<xs:element name="signerIndex" type="xs:integer"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="signEventBObj">
+	<xs:sequence>
+		<xs:element name="cocNumber" type="xs:string"/>
+		<xs:element name="accountPartyId" type="xs:string"/>
+		<xs:element name="signers" maxOccurs="unbounded" type="signerBObj"/>
+		<xs:element name="oppurtunityId" type="xs:string"/>
+		<xs:element name="quoteId" type="xs:string"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="singleSignEventBObj">
+	<xs:sequence>
+		<xs:element name="cocNumber" type="xs:string"/>
+		<xs:element name="accountPartyId" type="xs:string"/>
+		<xs:element name="signer" type="signerBObj"/>
+		<xs:element name="oppurtunityId" type="xs:string"/>
+		<xs:element name="quoteId" type="xs:string"/>
+	</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="withdrawSignerBObj">
+	<xs:sequence>
+		<xs:element name="signerIndex" type="xs:positiveInteger"/>
+		<xs:element name="lastName" type="xs:string"/>
+		<xs:element name="firstName" type="xs:string"/>
+		<xs:element name="cocNumber" type="xs:string"/>
+		<xs:element name="accountPartyId" type="xs:string"/>
+		<xs:element name="oppurtunityId" type="xs:string"/>
+	</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="Cp1252" ?>
+<cart>
+<connections>
+<connection>
+<displayname><![CDATA[hr@XE]]></displayname>
+<connectionname><![CDATA[IdeConnections%23hr%40XE]]></connectionname>
+<connectionuser><![CDATA[HR]]></connectionuser>
+</connection>
+</connections>
+<objects>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[COUNTRIES]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[DEPARTMENTS]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[EMPLOYEES]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[JOB_HISTORY]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[JOBS]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[LOCATIONS]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+<dbobject>
+	<objectconnection><![CDATA[IdeConnections%23hr%40XE]]></objectconnection>
+	<objecttype><![CDATA[TABLE]]></objecttype>
+	<objectschema><![CDATA[HR]]></objectschema>
+	<objectname><![CDATA[REGIONS]]></objectname>
+	<include><![CDATA[true]]></include>
+	<meta><![CDATA[true]]></meta>
+	<data><![CDATA[false]]></data>
+	<filter><![CDATA[]]></filter>
+</dbobject>
+</objects>
+</cart>

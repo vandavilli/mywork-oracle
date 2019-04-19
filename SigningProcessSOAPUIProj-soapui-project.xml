@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="bb074b93-ced9-41a7-a2a8-c60961baa335" activeEnvironment="Default" name="SigningProcessSOAPUIProj" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="a85781b9-9da8-4348-a5a2-1d61df44bcf3" wsaVersion="NONE" name="SigningProcessBinding" type="wsdl" bindingName="{http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess}SigningProcessBinding" soapVersion="1_1" anonymous="optional" definition="https://pcs-gse00011861.process.us2.oraclecloud.com/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://pcs-gse00011861.process.us2.oraclecloud.com/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service?WSDL"><con:part><con:url>https://pcs-gse00011861.process.us2.oraclecloud.com/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns6="http://www.example.org" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0/WSDLs/SigningProcess.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="SigningProcessPortTypePartnerLinkType">
+    <plnk:role name="SigningProcessPortTypeProvider">
+      <plnk:portType name="tns:SigningProcessPortType"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsp:Policy wsu:Id="SigningProcessPortType_Fault_Policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="SigningProcessPortType_Input_Policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+          <sp:Header Name="" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+          <sp:Header Name="" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="SigningProcessPortType_Output_Policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsaddr_policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wss11_saml_or_username_token_with_message_protection_service_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:RequireThumbprintReference/>
+                    <sp:WssX509V3Token11/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+            <sp:ProtectTokens/>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssSamlV11Token11/>
+              </wsp:Policy>
+            </sp:SamlToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssX509V3Token11/>
+              </wsp:Policy>
+            </sp:X509Token>
+          </wsp:Policy>
+        </sp:EndorsingSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+            <sp:MustSupportRefThumbprint/>
+            <sp:MustSupportRefEncryptedKey/>
+            <sp:RequireSignatureConfirmation/>
+          </wsp:Policy>
+        </sp:Wss11>
+      </wsp:All>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:RequireThumbprintReference/>
+                    <sp:WssX509V3Token11/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+            <sp:MustSupportRefThumbprint/>
+            <sp:MustSupportRefEncryptedKey/>
+            <sp:RequireSignatureConfirmation/>
+          </wsp:Policy>
+        </sp:Wss11>
+      </wsp:All>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false">
+                  <wsp:Policy/>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssSamlV11Token10/>
+              </wsp:Policy>
+            </sp:SamlToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false">
+                  <wsp:Policy/>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false">
+                  <wsp:Policy/>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess">
+      <xsd:import namespace="http://www.example.org" schemaLocation="https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service?XSD=../Schemas/http___www_example_org/SignEvent.xsd"/>
+      <xsd:element name="start">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="arg_signEventBObj" type="tns6:signEventBObj"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="endResponse">
+    <wsdl:part name="parameters" element="tns:endResponse"/>
+  </wsdl:message>
+  <wsdl:message name="start">
+    <wsdl:part name="parameters" element="tns:start"/>
+  </wsdl:message>
+  <wsdl:portType name="SigningProcessPortTypeCallBack">
+    <wsdl:operation name="end">
+      <wsdl:input message="tns:endResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SigningProcessPortType">
+    <wsdl:operation name="start">
+      <wsdl:input message="tns:start"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SigningProcessBinding" type="tns:SigningProcessPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#wss11_saml_or_username_token_with_message_protection_service_policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsp:PolicyReference URI="#wsaddr_policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsdl:operation name="start">
+      <wsdlsoap:operation style="document" soapAction="start"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+        <wsp:PolicyReference URI="#SigningProcessPortType_Input_Policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SigningProcessPortTypeCallBackBinding" type="tns:SigningProcessPortTypeCallBack">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="end">
+      <wsdlsoap:operation style="document" soapAction="end"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" namespace="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SigningProcess.service">
+    <wsdl:port name="SigningProcessPortType" binding="tns:SigningProcessBinding">
+      <wsdlsoap:address location="https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service"/>
+      <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Address>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service</wsa:Address>
+        <wsid:Identity xmlns:wsid="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+            <dsig:X509Data>
+              <dsig:X509Certificate>MIICozCCAYugAwIBAgIGAVweY/qoMA0GCSqGSIb3DQEBCwUAMHgxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdNeVN0YXRlMQ8wDQYDVQQHEwZNeVRvd24xFzAVBgNVBAoTDk15T3JnYW5pemF0aW9uMRkwFwYDVQQLExBGT1IgVEVTVElORyBPTkxZMRIwEAYDVQQDEwlDZXJ0R2VuQ0EwHhcNMTcwNTE5MDE0ODA3WhcNMjIwNTE4MDE0ODA3WjAOMQwwCgYDVQQDEwNQQ1MwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALhwnufq0C5dmRi4NLL23ZhlPDcA57M5tUH/6ofwu4HGrB0tOgMUjXJf/qo4AevQfQ+MxqQU6ez9voF+uLT1bLtiMN2aonkQsxOvBiG93tBEwwYpk/ZRERtQkPLGzrkrh1SKgtLoAnDw3xOyvHR42qjEKlMCirVl6pkPmpj/Q4e/AgMBAAGjITAfMB0GA1UdDgQWBBQwk0W226MSvIXORpuGn8PFpUrXFDANBgkqhkiG9w0BAQsFAAOCAQEAk2YGzd+QuaaCqT5WV4dmE087QZcSD7LZyOFQPZWwMg0DGI90BPaHvTr6Fkz+P3RDAp9bdMiZ9FMmE8dzi1OcIw5J+xeu75fnDeZZCnqN9F/BheT9ggvqcOwyHkiBivag1s9Xig6NzyRcsFQogo19pcsKDfqrxGeUahHSOPvqYFd67gRqVJhZZ4VFFLUDePviVPimuYdXTfCYg1CSVzO3BOj3W0R4ADY0anpXIMQB7Z2zQWk3fLxFlY/n2UUQwZ0XnnTbS844WRSwZSBW+cec249dk1h2s1Qt1Qx090KyaWb3X0YD/5U0mM8D97sRJDFF+YVhi3qLRZW5/KZnExKBTg==</dsig:X509Certificate>
+              <dsig:X509IssuerSerial>
+                <dsig:X509IssuerName>CN=CertGenCA, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US</dsig:X509IssuerName>
+                <dsig:X509SerialNumber>1495158487720</dsig:X509SerialNumber>
+              </dsig:X509IssuerSerial>
+              <dsig:X509SubjectName>CN=PCS</dsig:X509SubjectName>
+              <dsig:X509SKI>MJNFttujEryFzkabhp/DxaVK1xQ=</dsig:X509SKI>
+              <dsig:X509Certificate>MIIDvzCCAqegAwIBAgIQQARIhsRB7ztkOoBmQJr8oDANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQGEwJVUzEQMA4GA1UECAwHTXlTdGF0ZTEPMA0GA1UEBwwGTXlUb3duMRcwFQYDVQQKDA5NeU9yZ2FuaXphdGlvbjEZMBcGA1UECwwQRk9SIFRFU1RJTkcgT05MWTESMBAGA1UEAwwJQ2VydEdlbkNBMB4XDTEyMTIwMTAzMDc1MVoXDTMyMTIwMjAzMDc1MVoweDELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB015U3RhdGUxDzANBgNVBAcMBk15VG93bjEXMBUGA1UECgwOTXlPcmdhbml6YXRpb24xGTAXBgNVBAsMEEZPUiBURVNUSU5HIE9OTFkxEjAQBgNVBAMMCUNlcnRHZW5DQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKrdcNthuXGyFT2bNEb9CvWQ9khOemzobw5+DC4BPfr5WYeoFaUicduQIMK1fOVP4ScAJRLJLJ53n93lTJysUAquC1nCRXtpp8MeXtKKISn6y+9FrtkhHHiSGWh7hcgtB6xT8oE4XBpGHeljlP9rDwhq1iFy4QjuOTbqFjUPx7GZ9tqQCPjTk4iAi8pfAXES6FZMMH+M+pnBjnKRosY8l6bt3LIDrnxzd86ZQfHHaniK02eGtiOrjbH6o2HpzZfrmDHYnYkjh9dKx2WGA+t4eZmaOJdXAWFVDx9hR+2xxpAmemRvR7GwUry/9hbjVTQ0M1VLvU/ZC3FfyCr2y3snCikCAwEAAaNFMEMwDgYDVR0PAQH/BAQDAgIEMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFDQ4/UXYgM/H0ujfHfihObARiABqMA0GCSqGSIb3DQEBCwUAA4IBAQAXaXTPy5ZEMxezcA8q/6hjzHrIzXRZmd4QFv49FwBxuLD8xD+2sG13eJ+Dm+oio9rXNQDWxfM38Xwo36roLSoTnDhjtwjSDg0gk4Y9ovCGuSu0aj/G+2F3Nu5gB77CDuQzDOgIsTol3DviRzDxRkMGhe6rO2UpEjXU2ajskNtgak0Tme69Kaq7H5bJiPPjYzRzddRd7rcmzXjpqh64QhUB89kqZMRwHR7lmO8eeB9s333/S916U7LIDg0nJ0DbjRBHWy70dImFKhtqaj9l2SUrk6UzzgPMjmThn/E8pKsPxSg2Rrn0JGkKOOmmc5JorHn14dfL2P/+Ffe4OTPTZgMX</dsig:X509Certificate>
+            </dsig:X509Data>
+          </dsig:KeyInfo>
+        </wsid:Identity>
+      </wsa:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service?XSD=../Schemas/http___www_example_org/SignEvent.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.example.org" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org">
+  <xs:complexType name="signerBObj">
+    <xs:sequence>
+      <xs:element name="emailAddress" type="xs:string"/>
+      <xs:element name="lastName" type="xs:string"/>
+      <xs:element name="firstName" type="xs:string"/>
+      <xs:element name="powerOfAttorney" type="xs:string"/>
+      <xs:element name="signed" type="xs:boolean"/>
+      <xs:element name="fullSignAuthority" type="xs:boolean"/>
+      <xs:element name="signerIndex" type="xs:integer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="signEventBObj">
+    <xs:sequence>
+      <xs:element name="cocNumber" type="xs:string"/>
+      <xs:element name="accountPartyId" type="xs:string"/>
+      <xs:element name="signers" maxOccurs="unbounded" type="signerBObj"/>
+      <xs:element name="oppurtunityId" type="xs:string"/>
+      <xs:element name="quoteId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="singleSignEventBObj">
+    <xs:sequence>
+      <xs:element name="cocNumber" type="xs:string"/>
+      <xs:element name="accountPartyId" type="xs:string"/>
+      <xs:element name="signer" type="signerBObj"/>
+      <xs:element name="oppurtunityId" type="xs:string"/>
+      <xs:element name="quoteId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="withdrawSignerBObj">
+    <xs:sequence>
+      <xs:element name="signerIndex" type="xs:positiveInteger"/>
+      <xs:element name="lastName" type="xs:string"/>
+      <xs:element name="firstName" type="xs:string"/>
+      <xs:element name="cocNumber" type="xs:string"/>
+      <xs:element name="accountPartyId" type="xs:string"/>
+      <xs:element name="oppurtunityId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service</con:endpoint><con:endpoint>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service</con:endpoint><con:endpoint>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_cadd0946-f885-4957-8a7c-d5ff26792343/SigningProcess.service</con:endpoint></con:endpoints><con:operation id="2c7bbd9b-09e9-410c-8ce9-19194487909d" isOneWay="false" action="start" name="start" bindingOperationName="start" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9a0490ba-1b06-4b23-b5f3-055cac174073" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_b58c498e-44e3-4c35-b928-e5aefad23dfb/SigningProcess.service</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sig="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess" xmlns:exam="http://www.example.org">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sig:start>
+         <arg_signEventBObj>
+            <exam:cocNumber>COC_123</exam:cocNumber>
+            <exam:accountPartyId>ACCT_123</exam:accountPartyId>
+            <!--1 or more repetitions:-->
+            <exam:signers>
+               <exam:emailAddress>vandavilli@oracle.com</exam:emailAddress>
+               <exam:lastName>Andavilli</exam:lastName>
+               <exam:firstName>Vishu</exam:firstName>
+               <exam:powerOfAttorney>NO</exam:powerOfAttorney>
+               <exam:signed>false</exam:signed>
+               <exam:fullSignAuthority>true</exam:fullSignAuthority>
+               <exam:signerIndex>0</exam:signerIndex>
+            </exam:signers>
+            <exam:signers>
+               <exam:emailAddress>bsimpson@oracle.com</exam:emailAddress>
+               <exam:lastName>Simpson</exam:lastName>
+               <exam:firstName>Bart</exam:firstName>
+               <exam:powerOfAttorney>NO</exam:powerOfAttorney>
+               <exam:signed>false</exam:signed>
+               <exam:fullSignAuthority>true</exam:fullSignAuthority>
+               <exam:signerIndex>1</exam:signerIndex>
+            </exam:signers>
+            <exam:oppurtunityId>${=java.util.UUID.randomUUID()}</exam:oppurtunityId>
+            <exam:quoteId>QUOTE_123</exam:quoteId>
+         </arg_signEventBObj>
+      </sig:start>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:username>bala.gupta</con:username><con:password>chIrpy@1Knot</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Global HTTP Settings</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="start"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="03986d23-2207-4ed9-9552-60fd601d74bd" wsaVersion="NONE" name="SigningProcessPortTypeCallBackBinding" type="wsdl" bindingName="{http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess}SigningProcessPortTypeCallBackBinding" soapVersion="1_1" anonymous="optional" definition="https://pcs-gse00011861.process.us2.oraclecloud.com/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://pcs-gse00011861.process.us2.oraclecloud.com/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service?WSDL"><con:part><con:url>https://pcs-gse00011861.process.us2.oraclecloud.com/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess" xmlns:plnk="http://schemas.xmlsoap.org/ws/2003/05/partner-link/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns6="http://www.example.org" xmlns:tns="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0/WSDLs/SigningProcess.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="SigningProcessPortTypePartnerLinkType">
+    <plnk:role name="SigningProcessPortTypeProvider">
+      <plnk:portType name="tns:SigningProcessPortType"/>
+    </plnk:role>
+  </plnk:partnerLinkType>
+  <wsp:Policy wsu:Id="SigningProcessPortType_Fault_Policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="SigningProcessPortType_Input_Policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+          <sp:Header Name="" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+          <sp:Header Name="" Namespace="http://www.w3.org/2005/08/addressing"/>
+          <sp:Header Name="" Namespace="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+          <sp:Header Name="fmw-context" Namespace="http://xmlns.oracle.com/fmw/context/1.0"/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="SigningProcessPortType_Output_Policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+      <wsp:All>
+        <sp:SignedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:SignedParts>
+        <sp:SignedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+        <sp:EncryptedParts xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <sp:Body/>
+        </sp:EncryptedParts>
+        <sp:EncryptedElements xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy"/>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wsaddr_policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+    <wsaw:UsingAddressing xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"/>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="wss11_saml_or_username_token_with_message_protection_service_policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:RequireThumbprintReference/>
+                    <sp:WssX509V3Token11/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+            <sp:ProtectTokens/>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssSamlV11Token11/>
+              </wsp:Policy>
+            </sp:SamlToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:EndorsingSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssX509V3Token11/>
+              </wsp:Policy>
+            </sp:X509Token>
+          </wsp:Policy>
+        </sp:EndorsingSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+            <sp:MustSupportRefThumbprint/>
+            <sp:MustSupportRefEncryptedKey/>
+            <sp:RequireSignatureConfirmation/>
+          </wsp:Policy>
+        </sp:Wss11>
+      </wsp:All>
+      <wsp:All>
+        <sp:SymmetricBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:ProtectionToken>
+              <wsp:Policy>
+                <sp:X509Token sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/Never">
+                  <wsp:Policy>
+                    <sp:RequireThumbprintReference/>
+                    <sp:WssX509V3Token11/>
+                  </wsp:Policy>
+                </sp:X509Token>
+              </wsp:Policy>
+            </sp:ProtectionToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+            <sp:OnlySignEntireHeadersAndBody/>
+          </wsp:Policy>
+        </sp:SymmetricBinding>
+        <sp:SignedSupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SignedSupportingTokens>
+        <sp:Wss11 xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:MustSupportRefKeyIdentifier/>
+            <sp:MustSupportRefIssuerSerial/>
+            <sp:MustSupportRefThumbprint/>
+            <sp:MustSupportRefEncryptedKey/>
+            <sp:RequireSignatureConfirmation/>
+          </wsp:Policy>
+        </sp:Wss11>
+      </wsp:All>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false">
+                  <wsp:Policy/>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:SamlToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssSamlV11Token10/>
+              </wsp:Policy>
+            </sp:SamlToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false">
+                  <wsp:Policy/>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+            <sp:IncludeTimestamp/>
+          </wsp:Policy>
+        </sp:TransportBinding>
+        <sp:SupportingTokens xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:UsernameToken sp:IncludeToken="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient">
+              <wsp:Policy>
+                <sp:WssUsernameToken10/>
+              </wsp:Policy>
+            </sp:UsernameToken>
+          </wsp:Policy>
+        </sp:SupportingTokens>
+      </wsp:All>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://schemas.xmlsoap.org/ws/2005/07/securitypolicy">
+          <wsp:Policy>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <sp:Basic128/>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken RequireClientCertificate="false">
+                  <wsp:Policy/>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Lax/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess">
+      <xsd:import namespace="http://www.example.org" schemaLocation="https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service?XSD=../Schemas/http___www_example_org/SignEvent.xsd"/>
+      <xsd:element name="start">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element ref="tns6:signEventBObj"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="endResponse">
+        <xsd:complexType>
+          <xsd:sequence/>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="endResponse">
+    <wsdl:part name="parameters" element="tns:endResponse"/>
+  </wsdl:message>
+  <wsdl:message name="start">
+    <wsdl:part name="parameters" element="tns:start"/>
+  </wsdl:message>
+  <wsdl:portType name="SigningProcessPortTypeCallBack">
+    <wsdl:operation name="end">
+      <wsdl:input message="tns:endResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SigningProcessPortType">
+    <wsdl:operation name="start">
+      <wsdl:input message="tns:start"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SigningProcessBinding" type="tns:SigningProcessPortType">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:PolicyReference URI="#wss11_saml_or_username_token_with_message_protection_service_policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsp:PolicyReference URI="#wsaddr_policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+    <wsdl:operation name="start">
+      <wsdlsoap:operation style="document" soapAction="start"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal"/>
+        <wsp:PolicyReference URI="#SigningProcessPortType_Input_Policy" wsdl:required="false" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SigningProcessPortTypeCallBackBinding" type="tns:SigningProcessPortTypeCallBack">
+    <wsdlsoap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="end">
+      <wsdlsoap:operation style="document" soapAction="end"/>
+      <wsdl:input>
+        <wsdlsoap:body use="literal" namespace="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess"/>
+      </wsdl:input>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SigningProcess.service">
+    <wsdl:port name="SigningProcessPortType" binding="tns:SigningProcessBinding">
+      <wsdlsoap:address location="https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service"/>
+      <wsa:EndpointReference xmlns:wsa="http://www.w3.org/2005/08/addressing">
+        <wsa:Address>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service</wsa:Address>
+        <wsid:Identity xmlns:wsid="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+            <dsig:X509Data>
+              <dsig:X509Certificate>MIICozCCAYugAwIBAgIGAVweY/qoMA0GCSqGSIb3DQEBCwUAMHgxCzAJBgNVBAYTAlVTMRAwDgYDVQQIEwdNeVN0YXRlMQ8wDQYDVQQHEwZNeVRvd24xFzAVBgNVBAoTDk15T3JnYW5pemF0aW9uMRkwFwYDVQQLExBGT1IgVEVTVElORyBPTkxZMRIwEAYDVQQDEwlDZXJ0R2VuQ0EwHhcNMTcwNTE5MDE0ODA3WhcNMjIwNTE4MDE0ODA3WjAOMQwwCgYDVQQDEwNQQ1MwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBALhwnufq0C5dmRi4NLL23ZhlPDcA57M5tUH/6ofwu4HGrB0tOgMUjXJf/qo4AevQfQ+MxqQU6ez9voF+uLT1bLtiMN2aonkQsxOvBiG93tBEwwYpk/ZRERtQkPLGzrkrh1SKgtLoAnDw3xOyvHR42qjEKlMCirVl6pkPmpj/Q4e/AgMBAAGjITAfMB0GA1UdDgQWBBQwk0W226MSvIXORpuGn8PFpUrXFDANBgkqhkiG9w0BAQsFAAOCAQEAk2YGzd+QuaaCqT5WV4dmE087QZcSD7LZyOFQPZWwMg0DGI90BPaHvTr6Fkz+P3RDAp9bdMiZ9FMmE8dzi1OcIw5J+xeu75fnDeZZCnqN9F/BheT9ggvqcOwyHkiBivag1s9Xig6NzyRcsFQogo19pcsKDfqrxGeUahHSOPvqYFd67gRqVJhZZ4VFFLUDePviVPimuYdXTfCYg1CSVzO3BOj3W0R4ADY0anpXIMQB7Z2zQWk3fLxFlY/n2UUQwZ0XnnTbS844WRSwZSBW+cec249dk1h2s1Qt1Qx090KyaWb3X0YD/5U0mM8D97sRJDFF+YVhi3qLRZW5/KZnExKBTg==</dsig:X509Certificate>
+              <dsig:X509IssuerSerial>
+                <dsig:X509IssuerName>CN=CertGenCA, OU=FOR TESTING ONLY, O=MyOrganization, L=MyTown, ST=MyState, C=US</dsig:X509IssuerName>
+                <dsig:X509SerialNumber>1495158487720</dsig:X509SerialNumber>
+              </dsig:X509IssuerSerial>
+              <dsig:X509SubjectName>CN=PCS</dsig:X509SubjectName>
+              <dsig:X509SKI>MJNFttujEryFzkabhp/DxaVK1xQ=</dsig:X509SKI>
+              <dsig:X509Certificate>MIIDvzCCAqegAwIBAgIQQARIhsRB7ztkOoBmQJr8oDANBgkqhkiG9w0BAQsFADB4MQswCQYDVQQGEwJVUzEQMA4GA1UECAwHTXlTdGF0ZTEPMA0GA1UEBwwGTXlUb3duMRcwFQYDVQQKDA5NeU9yZ2FuaXphdGlvbjEZMBcGA1UECwwQRk9SIFRFU1RJTkcgT05MWTESMBAGA1UEAwwJQ2VydEdlbkNBMB4XDTEyMTIwMTAzMDc1MVoXDTMyMTIwMjAzMDc1MVoweDELMAkGA1UEBhMCVVMxEDAOBgNVBAgMB015U3RhdGUxDzANBgNVBAcMBk15VG93bjEXMBUGA1UECgwOTXlPcmdhbml6YXRpb24xGTAXBgNVBAsMEEZPUiBURVNUSU5HIE9OTFkxEjAQBgNVBAMMCUNlcnRHZW5DQTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKrdcNthuXGyFT2bNEb9CvWQ9khOemzobw5+DC4BPfr5WYeoFaUicduQIMK1fOVP4ScAJRLJLJ53n93lTJysUAquC1nCRXtpp8MeXtKKISn6y+9FrtkhHHiSGWh7hcgtB6xT8oE4XBpGHeljlP9rDwhq1iFy4QjuOTbqFjUPx7GZ9tqQCPjTk4iAi8pfAXES6FZMMH+M+pnBjnKRosY8l6bt3LIDrnxzd86ZQfHHaniK02eGtiOrjbH6o2HpzZfrmDHYnYkjh9dKx2WGA+t4eZmaOJdXAWFVDx9hR+2xxpAmemRvR7GwUry/9hbjVTQ0M1VLvU/ZC3FfyCr2y3snCikCAwEAAaNFMEMwDgYDVR0PAQH/BAQDAgIEMBIGA1UdEwEB/wQIMAYBAf8CAQEwHQYDVR0OBBYEFDQ4/UXYgM/H0ujfHfihObARiABqMA0GCSqGSIb3DQEBCwUAA4IBAQAXaXTPy5ZEMxezcA8q/6hjzHrIzXRZmd4QFv49FwBxuLD8xD+2sG13eJ+Dm+oio9rXNQDWxfM38Xwo36roLSoTnDhjtwjSDg0gk4Y9ovCGuSu0aj/G+2F3Nu5gB77CDuQzDOgIsTol3DviRzDxRkMGhe6rO2UpEjXU2ajskNtgak0Tme69Kaq7H5bJiPPjYzRzddRd7rcmzXjpqh64QhUB89kqZMRwHR7lmO8eeB9s333/S916U7LIDg0nJ0DbjRBHWy70dImFKhtqaj9l2SUrk6UzzgPMjmThn/E8pKsPxSg2Rrn0JGkKOOmmc5JorHn14dfL2P/+Ffe4OTPTZgMX</dsig:X509Certificate>
+            </dsig:X509Data>
+          </dsig:KeyInfo>
+        </wsid:Identity>
+      </wsa:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>https://pcs-gse00011861.process.us2.oraclecloud.com:443/soa-infra/services/default/CorrelationsDemoApp!1.0*soa_25e952ba-f9a2-4392-881d-225af014a8d4/SigningProcess.service?XSD=../Schemas/http___www_example_org/SignEvent.xsd</con:url><con:content><![CDATA[<xs:schema targetNamespace="http://www.example.org" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org">
+  <xs:element name="emailAddress" type="xs:string"/>
+  <xs:element name="lastName" type="xs:string"/>
+  <xs:element name="firstName" type="xs:string"/>
+  <xs:element name="powerOfAttorney" type="xs:string"/>
+  <xs:element name="signed" type="xs:boolean"/>
+  <xs:element name="fullSignAuthority" type="xs:boolean"/>
+  <xs:element name="signerIndex" type="xs:positiveInteger"/>
+  <xs:element name="cocNumber" type="xs:positiveInteger"/>
+  <xs:element name="accountPartyId" type="xs:string"/>
+  <xs:element name="oppurtunityId" type="xs:string"/>
+  <xs:element name="quoteId" type="xs:string"/>
+  <xs:element name="signerBObj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="emailAddress"/>
+        <xs:element ref="lastName"/>
+        <xs:element ref="firstName"/>
+        <xs:element ref="powerOfAttorney"/>
+        <xs:element ref="signed"/>
+        <xs:element ref="fullSignAuthority"/>
+        <xs:element ref="signerIndex"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="signEventBObj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cocNumber"/>
+        <xs:element ref="accountPartyId"/>
+        <xs:element ref="signerBObj" maxOccurs="unbounded"/>
+        <xs:element ref="signerIndex"/>
+        <xs:element ref="oppurtunityId"/>
+        <xs:element ref="quoteId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="singleSignEventBObj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="cocNumber"/>
+        <xs:element ref="accountPartyId"/>
+        <xs:element ref="signerBObj"/>
+        <xs:element ref="signerIndex"/>
+        <xs:element ref="oppurtunityId"/>
+        <xs:element ref="quoteId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="withdrawSignerBObj">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="signerIndex"/>
+        <xs:element ref="lastName"/>
+        <xs:element ref="firstName"/>
+        <xs:element ref="cocNumber"/>
+        <xs:element ref="accountPartyId"/>
+        <xs:element ref="oppurtunityId"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints/><con:operation id="968f0e78-f653-41f9-91cd-30e00064f4b3" isOneWay="false" action="end" name="end" bindingOperationName="end" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a13ac0c9-bb81-44a4-aefd-d576f63c9a0e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sig="http://xmlns.oracle.com/bpmn/bpmnCloudProcess/CorrelationsDemoApp/SigningProcess">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sig:endResponse/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="end"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
